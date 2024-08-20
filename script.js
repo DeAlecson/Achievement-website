@@ -53,10 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
     muteButton.addEventListener('click', function() {
         if (backgroundMusic.muted) {
             backgroundMusic.muted = false;
-            muteImg.src = "images/unmute.png";
+            muteImg.src = "Images/unmute.png";
         } else {
             backgroundMusic.muted = true;
-            muteImg.src = "images/mute.png";
+            muteImg.src = "Images/mute.png";
         }
     });
 
