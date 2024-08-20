@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Achievements</a> |
+        <a href="info.html">Info</a>
+    </nav>
+
+    <!-- Password Entry Section -->
+    <div id="password-container">
+        <h2>Enter Password to Access:</h2>
+        <input type="password" id="password-input" placeholder="Enter Password">
+        <button id="password-submit">Submit</button>
+        <p id="access-message"></p>
+    </div>
+
+    <!-- Music Controls moved to top right -->
+    <div id="mute-control" style="position: absolute; top: 10px; right: 10px;">
+        <audio id="background-music" loop>
+            <source src="Music/Song1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="mute-button" style="background: none; border: none;">
+            <img src="images/unmute.png" alt="Unmute" id="mute-img" style="width: 30px; height: 30px;">
+        </button>
+    </div>
+
+    <!-- Main Content (hidden initially) -->
+    <div id="main-content" style="display: none;">
+        <h1>Let's look back in time to what we have made together</h1>
+        <div class="grid-container">
+            <!-- Add your doodles here, all initially showing hidden.png -->
+            <div class="doodle" data-memory="memory1">
+                <img src="Doodles/hidden.png" alt="Hidden" class="hidden-image">
+            </div>
+            <div class="doodle" data-memory="memory2">
+                <img src="Doodles/hidden.png" alt="Hidden" class="hidden-image">
+            </div>
+            <div class="doodle" data-memory="memory3">
+                <img src="Doodles/hidden.png" alt="Hidden" class="hidden-image">
+            </div>
+            <div class="doodle" data-memory="memory4">
+                <img src="Doodles/hidden.png" alt="Hidden" class="hidden-image">
+            </div>
+            <div class="doodle" data-memory="memory5">
+                <img src="Doodles/hidden.png" alt="Hidden" class="hidden-image">
+            </div>
+            <div class="doodle" data-memory="memory6">
+                <img src="Doodles/hidden.png" alt="Hidden" class="hidden-image">
+            </div>
+            <div class="doodle" data-memory="memory7">
+                <img src="Doodles/hidden.png" alt="Hidden" class="hidden-image">
+            </div>
+            <div class="doodle" data-memory="memory8">
+                <img src="Doodles/hidden.png" alt="Hidden" class="hidden-image">
+            </div>
+            <div class="doodle" data-memory="memory9">
+                <img src="Doodles/hidden.png" alt="Hidden" class="hidden-image">
+            </div>
+            <div class="doodle" data-memory="memory10">
+                <img src="Doodles/hidden.png" alt="Hidden" class="hidden-image">
+            </div>
+            <!-- Locked doodles with requirements -->
+            <div class="doodle locked" data-requirement="Go to Japan together">
+                <img src="Doodles/locked.png" alt="Locked" class="locked-image">
+                <span class="doodle-title">???</span>
+            </div>
+            <div class="doodle locked" data-requirement="Eat Kobe beef together">
+                <img src="Doodles/locked.png" alt="Locked" class="locked-image">
+                <span class="doodle-title">???</span>
+            </div>
+            <div class="doodle locked" data-requirement="Eat omakase together">
+                <img src="Doodles/locked.png" alt="Locked" class="locked-image">
+                <span class="doodle-title">???</span>
+            </div>
+            <div class="doodle locked" data-requirement="Go to a cold country together">
+                <img src="Doodles/locked.png" alt="Locked" class="locked-image">
+                <span class="doodle-title">???</span>
+            </div>
+            <div class="doodle locked" data-requirement="Ride a hot air balloon together">
+                <img src="Doodles/locked.png" alt="Locked" class="locked-image">
+                <span class="doodle-title">???</span>
+            </div>
+            <div class="doodle locked" data-requirement="Dip in a hotspring together">
+                <img src="Doodles/locked.png" alt="Locked" class="locked-image">
+                <span class="doodle-title">???</span>
+            </div>
+            <div class="doodle locked" data-requirement="Finally get engaged">
+                <img src="Doodles/locked.png" alt="Locked" class="locked-image">
+                <span class="doodle-title">???</span>
+            </div>
+            <div class="doodle locked" data-requirement="Move in together">
+                <img src="Doodles/locked.png" alt="Locked" class="locked-image">
+                <span class="doodle-title">???</span>
+            </div>
+            <div class="doodle locked" data-requirement="Buy our own home">
+                <img src="Doodles/locked.png" alt="Locked" class="locked-image">
+                <span class="doodle-title">???</span>
+            </div>
+            <div class="doodle locked" data-requirement="Start a family together">
+                <img src="Doodles/locked.png" alt="Locked" class="locked-image">
+                <span class="doodle-title">???</span>
+            </div>
+            <!-- Add more locked doodles similarly -->
+        </div>
+
+        <!-- Modal for showing memory details -->
+        <div id="memory-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="memory-title"></h2>
+                <img id="memory-image" src="" alt="Memory detail image">
+                <p id="memory-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Loader Section -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div id="load-text">Loading... 0%</div>
+    </div>
+
+</body>
+</html>
