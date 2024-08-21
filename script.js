@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const muteImg = document.getElementById('mute-img');
     const loaderWrapper = document.getElementById('loader-wrapper');
     const loader = document.getElementById('loader');
-   const correctPassword1 = "yoursemistranger";
+    const loadText = document.getElementById('load-text');
+    const correctPassword1 = "yoursemistranger";
     const correctPassword2 = "mywholeworld";
 
     let resourceLoaded = false; // Flag to check resource loading
@@ -21,9 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 loaderWrapper.style.display = 'none';
                 resourceLoaded = true;
-                if (passwordInput.value === correctPassword) {
-                    mainContent.style.display = 'block';
-                }
+                // Removed the incorrect check for password here
             }, 500);
         }
     }
@@ -141,27 +140,27 @@ document.addEventListener('DOMContentLoaded', function() {
         memory6: {
             title: "Metaverse Dating",
             image: "Memories/memory6.png",
-            description: "We went on adventures in Minecraft and dated virtually. Don't Starve? You're always full! Somebody who plays competative in Strategy games like Catan and Letter League! "
+            description: "We went on adventures in Minecraft and dated virtually. Don't Starve? You're always full! Somebody who plays competitive in Strategy games like Catan and Letter League!"
         },
         memory7: {
             title: "Our Worlds",
             image: "Memories/memory7.png",
-            description: "We got to see each other's worlds, understand our culture and learn about eachother through the food we eat. There will always be many more to learn!"
+            description: "We got to see each other's worlds, understand our culture and learn about each other through the food we eat."
         },
         memory8: {
             title: "Hanabi no Hana",
             image: "Memories/memory8.png",
-            description: "It means Fireworks and Flowers, We got to watch the fireworks together and i hope with your love for fireworks, they remind you of the flowers I have gift to you too. "
+            description: "It means Fireworks and Flowers, We got to watch the fireworks together."
         },
         memory9: {
             title: "Beaches",
             image: "Memories/memory9.png",
-            description: "We got to go to a beach together, holding hands, looking towards the sunset, walking along the coast. There's nobody i want to do that with more."
+            description: "We got to go to a beach together, holding hands, looking towards the sunset, walking along the coast."
         },
         memory10: {
             title: "Bars",
             image: "Memories/memory10.png",
-            description: "We've been to amazing bars together, with my top being Jigger and Pony and notably Rappu. These are thanks to you, you always know the best places to get a drink, you're the greatest."
+            description: "We've been to amazing bars together, my top being Jigger and Pony and notably Rappu."
         }
     };
 });
