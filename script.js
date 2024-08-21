@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const muteImg = document.getElementById('mute-img');
     const loaderWrapper = document.getElementById('loader-wrapper');
     const loader = document.getElementById('loader');
-    const loadText = document.getElementById('load-text');
-    const correctPassword = "yoursemistranger";
+   const correctPassword1 = "yoursemistranger";
+    const correctPassword2 = "mywholeworld";
 
     let resourceLoaded = false; // Flag to check resource loading
-
+    
     function updateLoader(progress) {
         loader.style.width = `${progress}%`;
         loadText.textContent = `Loading... ${progress}%`;
@@ -33,7 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 2000);
 
     passwordSubmit.addEventListener('click', function() {
-        if (passwordInput.value === correctPassword && resourceLoaded) {
+        const enteredPassword = passwordInput.value;
+    
+        if ((enteredPassword === correctPassword1 || enteredPassword === correctPassword2) && resourceLoaded) {
             passwordContainer.style.display = 'none';
             mainContent.style.display = 'block';
             playAudio();
@@ -42,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             accessMessage.style.color = 'red';
         }
     });
-
+    
     function playAudio() {
         backgroundMusic.play().catch(error => {
             console.error('Error playing audio:', error);
