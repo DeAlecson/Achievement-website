@@ -108,7 +108,7 @@ h1 {
 }
 
 .doodle img:hover {
-    transform: scale(1.05); /* Slight scale on hover for effect */
+    transform: scale(1.25); /* Slight scale on hover for effect */
 }
 
 .doodle .doodle-title {
