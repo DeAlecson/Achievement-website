@@ -55,8 +55,12 @@ nav {
 nav a {
     color: #000;
     text-decoration: none;
-    margin: 0 20px;
-    font-size: 24px;
+    margin: 0 24px;
+    font-size: 36px;
+}
+
+p {
+    font-size: 22px;
 }
 
 nav a:hover {
@@ -65,7 +69,7 @@ nav a:hover {
 
 /* Header Title Styling */
 h1 {
-    font-size: 48px;
+    font-size: 56px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -111,7 +115,7 @@ h1 {
     display: block;
     margin-top: 5px; /* Space between the image and the title */
     color: #333;
-    font-size: 18px; /* Title text size */
+    font-size: 26px; /* Title text size */
     font-family: 'DoodleFont', sans-serif;
 }
 
@@ -178,7 +182,7 @@ h1 {
     }
 
     nav a {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     p {
