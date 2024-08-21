@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loaderWrapper = document.getElementById('loader-wrapper');
     const loader = document.getElementById('loader');
     const loadText = document.getElementById('load-text');
-    const correctPassword = "ilovetiffy";
+    const correctPassword = "yoursemistranger";
 
     let resourceLoaded = false; // Flag to check resource loading
 
