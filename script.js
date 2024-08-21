@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 loaderWrapper.style.display = 'none';
                 resourceLoaded = true;
-                // Removed the incorrect check for password here
             }, 500);
         }
     }
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             accessMessage.style.color = 'red';
         }
     });
-    
+
     function playAudio() {
         backgroundMusic.play().catch(error => {
             console.error('Error playing audio:', error);
@@ -83,10 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const memory = memories[memoryData];
 
             if (memory) {
-                if (img.src.includes('hidden.png')) {
-                    img.src = memory.image;
-                    titleSpan.textContent = memory.title;
-                }
+                img.src = memory.image; // Reveal the memory image
+                titleSpan.textContent = memory.title;
                 modalTitle.textContent = memory.title;
                 modalImage.src = memory.image;
                 modalDescription.textContent = memory.description;
@@ -164,3 +161,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 });
+
+
